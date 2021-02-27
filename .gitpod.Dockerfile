@@ -1,4 +1,5 @@
-ENV DEBIAN_FRONTEND noninteractive
+FROM debian:sid
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 FROM gitpod/workspace-full
 USER root
 RUN apt-get update
