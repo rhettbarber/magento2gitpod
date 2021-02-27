@@ -1,3 +1,4 @@
+ENV DEBIAN_FRONTEND noninteractive
 FROM gitpod/workspace-full
 USER root
 RUN apt-get update
