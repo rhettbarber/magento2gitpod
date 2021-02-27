@@ -1,6 +1,6 @@
+ENV DEBIAN_FRONTEND noninteractive
 FROM gitpod/workspace-full
 USER root
-ARG DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get -y install lsb-release
 RUN apt-get -y install apt-utils
@@ -471,3 +471,4 @@ RUN update-alternatives --remove php /usr/bin/php8.0 \
     && update-alternatives --set php /usr/bin/php7.3 \
     && update-alternatives --set php-config /usr/bin/php-config7.3 \
     && update-alternatives --set phpize /usr/bin/phpize7.3
+ENV DEBIAN_FRONTEND teletype
