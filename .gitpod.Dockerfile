@@ -1,6 +1,5 @@
 FROM gitpod/workspace-full
 USER root
-echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update
 RUN apt-get -y install lsb-release
 RUN apt-get -y install apt-utils
