@@ -1,6 +1,6 @@
-ENV DEBIAN_FRONTEND noninteractive
 FROM gitpod/workspace-full
 USER root
+ARG DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get -y install lsb-release
 RUN apt-get -y install apt-utils
